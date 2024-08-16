@@ -69,77 +69,77 @@ export default function NewAppLayout({ children, user }) {
     () => !scrolled && router.pathname === '/',
     [router, scrolled]
   )
-  return (<div>Under maintenance</div>)
-  // return (
-  //   <>
-  //     <header className="flex h-20 items-center justify-center bg-base-2 font-ibm-plex-sans dark:border-b dark:border-darkmode-border dark:bg-darkmode-base-1 max-sm:hidden">
-  //       <div className="flex min-w-[620px] justify-between ">
-  //         <NewNav />
-  //         <div>
-  //           <NewChip as="button" onClick={changeTheme}>
-  //             <Theme />
-  //           </NewChip>
-  //         </div>
-  //       </div>
-  //     </header>
-  //     <header
-  //       className={classNames(
-  //         'fixed -top-20 left-1/2 z-30 w-full max-w-[620px] -translate-x-1/2 duration-300 max-sm:translate-y-24 max-sm:px-5',
-  //         scrolled && 'translate-y-24'
-  //       )}
-  //     >
-  //       <div className="mx-auto flex min-h-[4.7rem] items-center rounded-full border border-primary-1 bg-base-2 py-1 pl-1 pr-2.5 dark:border-darkmode-border dark:bg-darkmode-base-1">
-  //         <div className="flex w-full items-center gap-2">
-  //           <div
-  //             className={classNames(
-  //               'w-[4.3rem] overflow-hidden',
-  //               imageMemo && '!w-0'
-  //             )}
-  //           >
-  //             <Link href="/#">
-  //               <NewChip className="inline-flex p-1">
-  //                 <div className="relative h-12 w-12">
-  //                   <Image
-  //                     fill
-  //                     src="/img/coder_profile.jpg"
-  //                     className="rounded-full"
-  //                     alt=""
-  //                   />
-  //                 </div>
-  //               </NewChip>
-  //             </Link>
-  //           </div>
-  //           <div className={classNames(imageMemo && 'ml-2')}>
-  //             <h1 className="text-sm font-semibold dark:text-darkmode-title">
-  //              Abdallah Touman
-  //             </h1>
-  //             <p className="text-2xs font-normal text-primary-6 dark:text-darkmode-text">
-  //               Software Engineer
-  //             </p>
-  //           </div>
-  //         </div>
+  // return (<div>Under maintenance</div>)
+  return (
+    <>
+      <header className="flex h-20 items-center justify-center bg-base-2 font-ibm-plex-sans dark:border-b dark:border-darkmode-border dark:bg-darkmode-base-1 max-sm:hidden">
+        <div className="flex min-w-[620px] justify-between ">
+          <NewNav />
+          <div>
+            <NewChip as="button" onClick={changeTheme}>
+              <Theme />
+            </NewChip>
+          </div>
+        </div>
+      </header>
+      <header
+        className={classNames(
+          'fixed -top-20 left-1/2 z-30 w-full max-w-[620px] -translate-x-1/2 duration-300 max-sm:translate-y-24 max-sm:px-5',
+          scrolled && 'translate-y-24'
+        )}
+      >
+        <div className="mx-auto flex min-h-[4.7rem] items-center rounded-full border border-primary-1 bg-base-2 py-1 pl-1 pr-2.5 dark:border-darkmode-border dark:bg-darkmode-base-1">
+          <div className="flex w-full items-center gap-2">
+            <div
+              className={classNames(
+                'w-[4.3rem] overflow-hidden',
+                imageMemo && '!w-0'
+              )}
+            >
+              <Link href="/#">
+                <NewChip className="inline-flex p-1">
+                  <div className="relative h-12 w-12">
+                    <Image
+                      fill
+                      src="/img/coder_profile.jpg"
+                      className="rounded-full"
+                      alt=""
+                    />
+                  </div>
+                </NewChip>
+              </Link>
+            </div>
+            <div className={classNames(imageMemo && 'ml-2')}>
+              <h1 className="text-sm font-semibold dark:text-darkmode-title">
+               Abdallah Touman
+              </h1>
+              <p className="text-2xs font-normal text-primary-6 dark:text-darkmode-text">
+                Software Engineer
+              </p>
+            </div>
+          </div>
 
-  //         <NewChip
-  //           as="button"
-  //           onClick={handleMobileMenu}
-  //           className="flex h-10 w-11 items-center justify-center !p-0"
-  //         >
-  //           <HamburgerMenu />
-  //         </NewChip>
-  //       </div>
+          <NewChip
+            as="button"
+            onClick={handleMobileMenu}
+            className="flex h-10 w-11 items-center justify-center !p-0"
+          >
+            <HamburgerMenu />
+          </NewChip>
+        </div>
 
-  //       <div
-  //         className={classNames(
-  //           'absolute left-0 top-[3px] -z-10 h-full w-full duration-300 max-sm:-translate-y-[600px] max-sm:px-5',
-  //           isMobileMenu && '!translate-y-[5.1rem]'
-  //         )}
-  //       >
-  //         <MobileMenu />
-  //       </div>
-  //     </header>
-  //     <main className="bg-base-4 px-5 font-ibm-plex-sans dark:bg-darkmode-base-1">
-  //       {children}
-  //     </main>
-  //   </>
-  // )
+        <div
+          className={classNames(
+            'absolute left-0 top-[3px] -z-10 h-full w-full duration-300 max-sm:-translate-y-[600px] max-sm:px-5',
+            isMobileMenu && '!translate-y-[5.1rem]'
+          )}
+        >
+          <MobileMenu />
+        </div>
+      </header>
+      <main className="bg-base-4 px-5 font-ibm-plex-sans dark:bg-darkmode-base-1">
+        {children}
+      </main>
+    </>
+  )
 }
