@@ -2,7 +2,7 @@ username: abdallah
 name: Abdallah
 surname: Touman
 job: 👋 Hey, I’m @abdallahtouman a Software Engineer at Fabrikod.
-<br/>motto -> 💡 Identify problems ⚡ solve them.
+motto -> 💡 Identify problems ⚡ solve them.
 description: Software Engineer
 email: 'abdullah.touman@fabrikod.com'
 image: '/img/coder_profile.jpg'
